@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://agilestarskim.github.io/agilestarskim.github.io/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/agilestarskim.github.io/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/agilestarskim.github.io/posts/hello-world</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/agilestarskim.github.io/posts/what-is-network</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/agilestarskim.github.io/pages/portfolio/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/agilestarskim.github.io/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/agilestarskim.github.io/tag/essay</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/agilestarskim.github.io/tag/hello-world</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/agilestarskim.github.io/tag/network</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/agilestarskim.github.io/tag/tcp-ip</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/agilestarskim.github.io/category/essay</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/agilestarskim.github.io/category/네트워크</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/agilestarskim.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/posts/hello-world</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/posts/what-is-network</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/pages/portfolio/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/tag/essay</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/tag/hello-world</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/tag/network</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/tag/tcp-ip</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/category/essay</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/category/네트워크</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

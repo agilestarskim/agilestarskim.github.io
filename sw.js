@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-2c9ca50e2374ddf1670a.js"
+    "url": "webpack-runtime-c7e8e3fa967e1ce63240.js"
   },
   {
     "url": "styles.08b6f1b92a40a3f4c705.css"
@@ -42,22 +42,14 @@ self.__precacheManifest = [
     "url": "532a2f07-a2b9837034ae8adfec32.js"
   },
   {
-    "url": "app-cf77fe76704d209992c6.js"
+    "url": "app-0aefa5b248282acc3e1b.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "b9385757efa284a7c141977f155a0173"
+    "revision": "722f335f29608d4cfdd11063c88a8084"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-5081bfd3b3053fb653b2.js"
-  },
-  {
-    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "f6081b83111aea4128c98944b7fafccc"
-  },
-  {
-    "url": "page-data/app-data.json",
-    "revision": "345c5a587e91158f62c44177a5c6e335"
   },
   {
     "url": "polyfill-64a2a5ba1fc84f7adec6.js"
@@ -68,7 +60,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "bb2bf356b3c9ad0d8c9108447db8b0c3"
+    "revision": "69f72adbc7300f12211dbe28af5fce7d"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -155,12 +147,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/agilestarskim.github.io`), ``)
+  pathname = pathname.replace(new RegExp(`^`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/agilestarskim.github.io/app-cf77fe76704d209992c6.js`))) {
+  if (!resources || !(await caches.match(`/app-0aefa5b248282acc3e1b.js`))) {
     return await fetch(event.request)
   }
 
@@ -173,7 +165,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/agilestarskim.github.io/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
