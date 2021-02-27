@@ -1,1 +1,101 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MinSeong IT Blog]]></title><description><![CDATA[MinSeong IT Blog]]></description><link>https://agilestarskim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 27 Feb 2021 08:22:59 GMT</lastBuildDate><item><title><![CDATA[Hello world]]></title><description><![CDATA[hello world]]></description><link>https://agilestarskim.github.io/posts/hello-world</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/hello-world</guid><pubDate>Sat, 27 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;hello world&lt;/p&gt;</content:encoded></item><item><title><![CDATA[What is network?]]></title><description><![CDATA[i've just learn about Network]]></description><link>https://agilestarskim.github.io/posts/what-is-network</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/what-is-network</guid><pubDate>Sat, 27 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Test&lt;/p&gt;</content:encoded></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MinSeong IT Blog]]></title><description><![CDATA[MinSeong IT Blog]]></description><link>https://agilestarskim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 27 Feb 2021 13:37:59 GMT</lastBuildDate><item><title><![CDATA[첫 게시글]]></title><description><![CDATA[블로그 개설 후 첫 게시물이다. 글주변이 없어서 글쓰는게 어렵지만 공부를 하면서 배운것들을 기록하고 공유하고 싶어서 블로그를 만들었다.]]></description><link>https://agilestarskim.github.io/posts/first-post</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/first-post</guid><pubDate>Sat, 27 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;블로그 개설 후 첫 게시물이다. 글주변이 없어서 글쓰는게 어렵지만 공부를 하면서 배운것들을 기록하고 공유하고 싶어서
+블로그를 만들었다. IT관련 내용 뿐만 아니라 살면서 느낀 생각, 책을 읽고난 후 독후감 등도 Essay 카테고리에 올릴 생각이다. 지금은 많이 초라하지만 나중에는 그럴싸할거다.&lt;/p&gt;
+&lt;p&gt;구글 애널리틱스도 만들었다. 이걸로 방문자수나 조회수등을 볼 수 있다. &lt;del&gt;(제발 아무나 들어와주세요)&lt;/del&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;마크다운 문법은 어렵다.. 익숙해질 때 까지 VSC에서 직접 타이핑할 예정..&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;포스팅할때 카테고리 이름을설정하면 자동으로 매뉴바에 카테고리를 생성하게끔 만들어 놓았다. 하지만 카테고리 이름이
+Essay면 Essay 매뉴로 쏙 하고 들어간다.(덕분에 map, filter 정복)
+이것때문에 하루종일 폴더 뒤지고 수정하고 난리도 아니었다.(덕분에 gatsby 폴더구조 정복)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;블로그 배경색은 베이지로 바꿀 예정이다. 하얀색은 눈이 아프기 때문이다. 첫 게시물이라 두서가 없다. 사실 마크다운연습중&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 640px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0d664d9ded97c63822f4ce7dd900a1b7/c08c5/first-post-01.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.83333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/aAAwDAQACEAMQAAABnTUg7ogS/8QAGxAAAgIDAQAAAAAAAAAAAAAAAgMAAQQRExL/2gAIAQEAAQUCbZ+9nMW75sS22cHTGElh/8QAFREBAQAAAAAAAAAAAAAAAAAAECH/2gAIAQMBAT8Bp//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EACAQAAEDAgcAAAAAAAAAAAAAAAEAAhEhMhIiM0FRkaH/2gAIAQEABj8CecZviJWo7tHMTVPgUJ5VvqIcN1//xAAcEAEAAgIDAQAAAAAAAAAAAAABABEhMVFhkeH/2gAIAQEAAT8hqPCgIG36Yy3kV6I0HdYW+EpIOW5//9oADAMBAAIAAwAAABCcz//EABURAQEAAAAAAAAAAAAAAAAAAAEA/9oACAEDAQE/EEgX/8QAFhEAAwAAAAAAAAAAAAAAAAAAARAR/9oACAECAQE/EKF//8QAHRABAAICAgMAAAAAAAAAAAAAAQARITFBYXGB0f/aAAgBAQABPxAIuKjgy6gG0bCF/SMEr7IisPaF2+ZtABwfSXl9gA4o76n/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/0d664d9ded97c63822f4ce7dd900a1b7/8ac56/first-post-01.webp 240w,
+/static/0d664d9ded97c63822f4ce7dd900a1b7/d3be9/first-post-01.webp 480w,
+/static/0d664d9ded97c63822f4ce7dd900a1b7/0ba47/first-post-01.webp 640w&quot;
+              sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/0d664d9ded97c63822f4ce7dd900a1b7/09b79/first-post-01.jpg 240w,
+/static/0d664d9ded97c63822f4ce7dd900a1b7/7cc5e/first-post-01.jpg 480w,
+/static/0d664d9ded97c63822f4ce7dd900a1b7/c08c5/first-post-01.jpg 640w&quot;
+            sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/0d664d9ded97c63822f4ce7dd900a1b7/c08c5/first-post-01.jpg&quot;
+            alt=&quot;아무사진&quot;
+            title=&quot;아무사진&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+(마크다운 연습용 사진) 대충 열심히 공부해서 높은곳까지 올라가겠단 뜻. &lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;이번학기에 웹, 네트워크, 데이터베이스, 오토마타(처음들어봄), 운영체제에 대해 배운다.
+열심히 공부해서 장학금 탈 예정이다. 블로그 운영도 하고 쇼핑몰 프로젝트도 하고 영어공부도 하고 헬스도하고
+이번학기는 정말 할게 많다… 하지만 1일 1포스팅을 목표로! &lt;/p&gt;</content:encoded></item><item><title><![CDATA[we]]></title><description><![CDATA[test]]></description><link>https://agilestarskim.github.io/posts/web-programming</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/web-programming</guid><pubDate>Sat, 27 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;test
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 640px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4c640c358ce32ed3bad7f388e53a1af9/c08c5/web-01.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/aAAwDAQACEAMQAAAByWroOzFQr//EABoQAQABBQAAAAAAAAAAAAAAAAIQAAEREiH/2gAIAQEAAQUCEYNHh2vH/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BZ//EABkQAAEFAAAAAAAAAAAAAAAAAAACEBEhQf/aAAgBAQAGPwItJpL/AP/EABsQAAMAAgMAAAAAAAAAAAAAAAABESExYXGh/9oACAEBAAE/IamHeCJ7u4O4yE3YUSr8G3dn/9oADAMBAAIAAwAAABArH//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/EFf/xAAWEQADAAAAAAAAAAAAAAAAAAAAARH/2gAIAQIBAT8QaMh//8QAHxABAAICAAcAAAAAAAAAAAAAAQARITFBUXGBkaHx/9oACAEBAAE/ECmMjeld44gOWD2VCUEdfkep1W3iCgFTdJxh5n//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/4c640c358ce32ed3bad7f388e53a1af9/8ac56/web-01.webp 240w,
+/static/4c640c358ce32ed3bad7f388e53a1af9/d3be9/web-01.webp 480w,
+/static/4c640c358ce32ed3bad7f388e53a1af9/0ba47/web-01.webp 640w&quot;
+              sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/4c640c358ce32ed3bad7f388e53a1af9/09b79/web-01.jpg 240w,
+/static/4c640c358ce32ed3bad7f388e53a1af9/7cc5e/web-01.jpg 480w,
+/static/4c640c358ce32ed3bad7f388e53a1af9/c08c5/web-01.jpg 640w&quot;
+            sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/4c640c358ce32ed3bad7f388e53a1af9/c08c5/web-01.jpg&quot;
+            alt=&quot;web&quot;
+            title=&quot;web&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
