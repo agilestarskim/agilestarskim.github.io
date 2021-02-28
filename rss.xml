@@ -1,17 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MinSeong IT Blog]]></title><description><![CDATA[MinSeong IT Blog]]></description><link>https://agilestarskim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 27 Feb 2021 15:38:44 GMT</lastBuildDate><item><title><![CDATA[첫 게시글]]></title><description><![CDATA[블로그 개설 후 첫 게시물이다. 글주변이 없어서 글쓰는게 어렵지만 공부를 하면서 배운것들을 기록하고 공유하고 싶어서 블로그를 만들었다.]]></description><link>https://agilestarskim.github.io/posts/first-post</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/first-post</guid><pubDate>Sat, 27 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;블로그 개설 후 첫 게시물이다. 글주변이 없어서 글쓰는게 어렵지만 공부를 하면서 배운것들을 기록하고 공유하고 싶어서
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MinSeong IT Blog]]></title><description><![CDATA[MinSeong IT Blog]]></description><link>https://agilestarskim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Feb 2021 02:05:26 GMT</lastBuildDate><item><title><![CDATA[첫 게시글]]></title><description><![CDATA[블로그 개설 후 첫 게시물이다. 글주변이 없어서 글쓰는게 어렵지만 공부를 하면서 배운것들을 기록하고 공유하고 싶어서 블로그를 만들었다.]]></description><link>https://agilestarskim.github.io/posts/first-post</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/first-post</guid><pubDate>Sat, 27 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;블로그 개설 후 첫 게시물이다. 글주변이 없어서 글쓰는게 어렵지만 공부를 하면서 배운것들을 기록하고 공유하고 싶어서
 블로그를 만들었다. IT관련 내용 뿐만 아니라 살면서 느낀 생각, 책을 읽고난 후 독후감 등도 Essay 카테고리에 올릴 생각이다. 지금은 많이 초라하지만 나중에는 그럴싸할거다.&lt;/p&gt;
 &lt;p&gt;구글 애널리틱스도 만들었다. 이걸로 방문자수나 조회수등을 볼 수 있다. &lt;del&gt;(제발 아무나 들어와주세요)&lt;/del&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;마크다운 문법은 어렵다.. 익숙해질 때 까지 VSC에서 직접 타이핑할 예정..&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;마크다운 문법은 어렵다..&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;포스팅할때 카테고리 이름을설정하면 자동으로 매뉴바에 카테고리를 생성하게끔 만들어 놓았다. 하지만 카테고리 이름이
 Essay면 Essay 매뉴로 쏙 하고 들어간다.(덕분에 map, filter 정복)
 이것때문에 하루종일 폴더 뒤지고 수정하고 난리도 아니었다.(덕분에 gatsby 폴더구조 정복)&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;블로그 배경색은 베이지로 바꿀 예정이다. 하얀색은 눈이 아프기 때문이다. 첫 게시물이라 두서가 없다. 사실 마크다운연습중&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 640px; &quot;
@@ -52,8 +49,7 @@ Essay면 Essay 매뉴로 쏙 하고 들어간다.(덕분에 map, filter 정복)
           /&gt;
         &lt;/picture&gt;
   &lt;/a&gt;
-    &lt;/span&gt;
-(마크다운 연습용 사진) 대충 열심히 공부해서 높은곳까지 올라가겠단 뜻. &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;이번학기에 웹, 네트워크, 데이터베이스, 오토마타(처음들어봄), 운영체제에 대해 배운다.
 열심히 공부해서 장학금 탈 예정이다. 블로그 운영도 하고 쇼핑몰 프로젝트도 하고 영어공부도 하고 헬스도하고
