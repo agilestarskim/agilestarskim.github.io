@@ -1,14 +1,217 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MinSeong IT Blog]]></title><description><![CDATA[MinSeong IT Blog]]></description><link>https://agilestarskim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Feb 2021 02:05:26 GMT</lastBuildDate><item><title><![CDATA[첫 게시글]]></title><description><![CDATA[블로그 개설 후 첫 게시물이다. 글주변이 없어서 글쓰는게 어렵지만 공부를 하면서 배운것들을 기록하고 공유하고 싶어서 블로그를 만들었다.]]></description><link>https://agilestarskim.github.io/posts/first-post</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/first-post</guid><pubDate>Sat, 27 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;블로그 개설 후 첫 게시물이다. 글주변이 없어서 글쓰는게 어렵지만 공부를 하면서 배운것들을 기록하고 공유하고 싶어서
-블로그를 만들었다. IT관련 내용 뿐만 아니라 살면서 느낀 생각, 책을 읽고난 후 독후감 등도 Essay 카테고리에 올릴 생각이다. 지금은 많이 초라하지만 나중에는 그럴싸할거다.&lt;/p&gt;
-&lt;p&gt;구글 애널리틱스도 만들었다. 이걸로 방문자수나 조회수등을 볼 수 있다. &lt;del&gt;(제발 아무나 들어와주세요)&lt;/del&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;마크다운 문법은 어렵다..&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;포스팅할때 카테고리 이름을설정하면 자동으로 매뉴바에 카테고리를 생성하게끔 만들어 놓았다. 하지만 카테고리 이름이
-Essay면 Essay 매뉴로 쏙 하고 들어간다.(덕분에 map, filter 정복)
-이것때문에 하루종일 폴더 뒤지고 수정하고 난리도 아니었다.(덕분에 gatsby 폴더구조 정복)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MinSeong IT Blog]]></title><description><![CDATA[MinSeong IT Blog]]></description><link>https://agilestarskim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 Mar 2021 09:13:43 GMT</lastBuildDate><item><title><![CDATA[겟츠비 블로그 커스터마이징]]></title><description><![CDATA[블로그를 운영하기 위해 어떤 플랫폼들이 있는지 알아보다가 많은 개발자들이 깃헙페이지를 이용해 블로그를 커스터마이징하는것을 꽤 많이 봤다. 언젠간 블로그를 운영할 생각이 있었지만 귀찮은 것들이 한 둘이 아니라 언젠간 하겠지 하는 마음으로 블로그 운영을 미루고있었다. 하지만 곧 학기가 시작하기도하고 새로운 마음으로 공부한 내용들을 기록하고 싶은 마음이 들었다.]]></description><link>https://agilestarskim.github.io/posts/gatsby-tutorial</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/gatsby-tutorial</guid><pubDate>Mon, 01 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;블로그를 운영하기 위해 어떤 플랫폼들이 있는지 알아보다가 많은 개발자들이 깃헙페이지를 이용해 블로그를 커스터마이징하는것을 꽤 많이 봤다. 언젠간 블로그를 운영할 생각이 있었지만 귀찮은 것들이 한 둘이 아니라 언젠간 하겠지 하는 마음으로 블로그 운영을 미루고있었다. 하지만 곧 학기가 시작하기도하고 새로운 마음으로 공부한 내용들을 기록하고 싶은 마음이 들었다. 그래서 결국 깃헙페이지를 이용해서 나만의 블로그를 만들기로 마음먹었다. 그래서 오늘은 겟츠비를 이용해 블로그를 만들었던 과정을 공유하려고 한다. (잘못된 내용이 있을 수도 있음)&lt;/p&gt;
+&lt;h3 id=&quot;1-겟츠비란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EA%B2%9F%EC%B8%A0%EB%B9%84%EB%9E%80&quot; aria-label=&quot;1 겟츠비란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 겟츠비란?&lt;/h3&gt;
+&lt;p&gt;겟츠비(Gatsby)란 정적페이지 생성기로 여러 자바스크립트,css 파일 등을 빌드해서 하나의 정적 html파일로 변환시켜주는 프레임워크다. 정적페이지와 SPA는 html파일로 빌드시켜주는것은 동일하지만 spa는 하나의 html파일을 생성하고 DOM을 실시간으로 조작해서 클라이언트 사이드 랜더링 방식으로 작동하지만, 정적페이지는 빌드할때 정적인 html파일 여러개를 생성하고 서버사이드 랜더링 방식으로 동작한다. &lt;/p&gt;
+&lt;p&gt;겟츠비는 mark down 방식으로 포스팅할 수 있고, SEO, PWA 등 여러 플러그인들을 지원한다. 특히 ‘gatsby-stater’를 이용하면 다양한 템플릿을 제공받을수 있기때문에 처음부터 하드코딩으로 블로그를 만들어야하는 생고생을 줄여줄 수 있다. &lt;a href=&quot;https://www.gatsbyjs.com/starters/?&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;gatsby-starter&lt;/a&gt; 다양한 템플릿이 마련되어있기때문에 고르는 재미도 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ee9c5d8e80cb2d4b39ae993b30066d8e/d3e61/gatsby-tutorial-01.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.833333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAgT/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAG4rSjqJIf/xAAcEAABBAMBAAAAAAAAAAAAAAABAAIDBBESISL/2gAIAQEAAQUCwEC/dA+rHIaj3GP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAcEAABBAMBAAAAAAAAAAAAAAABAAIREhAhMVH/2gAIAQEABj8C4FFRX2cvI6jLidr/xAAbEAEAAgIDAAAAAAAAAAAAAAABACERQTFRwf/aAAgBAQABPyG/yl8M6QRkGZbyA5GIrHdzon//2gAMAwEAAgADAAAAEHwP/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQMBAT8Qp//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABoQAQEBAQEBAQAAAAAAAAAAAAERACExQaH/2gAIAQEAAT8QZP1Gps5DonzkxIsla5ZcR5qQ+okTzzFyzBdB4d3/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/ee9c5d8e80cb2d4b39ae993b30066d8e/8ac56/gatsby-tutorial-01.webp 240w,
+/static/ee9c5d8e80cb2d4b39ae993b30066d8e/d3be9/gatsby-tutorial-01.webp 480w,
+/static/ee9c5d8e80cb2d4b39ae993b30066d8e/e46b2/gatsby-tutorial-01.webp 960w,
+/static/ee9c5d8e80cb2d4b39ae993b30066d8e/f992d/gatsby-tutorial-01.webp 1440w,
+/static/ee9c5d8e80cb2d4b39ae993b30066d8e/882b9/gatsby-tutorial-01.webp 1920w,
+/static/ee9c5d8e80cb2d4b39ae993b30066d8e/d6026/gatsby-tutorial-01.webp 2850w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/ee9c5d8e80cb2d4b39ae993b30066d8e/09b79/gatsby-tutorial-01.jpg 240w,
+/static/ee9c5d8e80cb2d4b39ae993b30066d8e/7cc5e/gatsby-tutorial-01.jpg 480w,
+/static/ee9c5d8e80cb2d4b39ae993b30066d8e/6a068/gatsby-tutorial-01.jpg 960w,
+/static/ee9c5d8e80cb2d4b39ae993b30066d8e/644c5/gatsby-tutorial-01.jpg 1440w,
+/static/ee9c5d8e80cb2d4b39ae993b30066d8e/0f98f/gatsby-tutorial-01.jpg 1920w,
+/static/ee9c5d8e80cb2d4b39ae993b30066d8e/d3e61/gatsby-tutorial-01.jpg 2850w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/ee9c5d8e80cb2d4b39ae993b30066d8e/6a068/gatsby-tutorial-01.jpg&quot;
+            alt=&quot;gatsby starter&quot;
+            title=&quot;gatsby starter&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-폴더구조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%ED%8F%B4%EB%8D%94%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;2 폴더구조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 폴더구조&lt;/h3&gt;
+&lt;p&gt;gatsby cli를 이용해 gatsby 명령어를 사용할 수 있다.
+&lt;code class=&quot;language-text&quot;&gt;gatsby new [폴더이름] [선택한 gatsby-starter url]&lt;/code&gt;
+을 이용하면 선택한 템플릿을 다운받을 수 있다. 개발환경 세팅은 많은 블로그들이 다루고 있으므로 넘어가도록 하겠다.
+나는 gatsby-stater-lumen 템플릿을 선택했다. 템플릿마다 폴더구조는 상이할 수 있다.
+기본적인 커스텀은 config.js 파일에서 해결할 수있다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;게시글과 페이지는 content폴더에서 md형식으로 만들 수 있다. &lt;/li&gt;
+&lt;li&gt;이미지는 static/media 폴더에 저장하면 된다. 또한 프로필 사진은 photo.jpg란 이름으로 static폴더에 넣어주면 된다. &lt;/li&gt;
+&lt;li&gt;gatby build 명령어를 입력하면 public폴더에 빌드한 파일들이 저장되게 된다. &lt;/li&gt;
+&lt;li&gt;src폴더에는 컴포넌트와 템플릿등을 관리한다. 컴포넌트에는 게시글, 레이아웃, 사이드바 등 컴포넌트의 구조와 디자인을 관리할 수 있다. 디자인적인 커스텀은 src폴더에서 대부분 할 수 있다고 보면된다.&lt;/li&gt;
+&lt;li&gt;gatsby-config.js 파일에서는 플러그인등을 관리할 수 있다. lumen을 사용하면 이미 여러 플러그인들이 설치된 것을 볼 수 있다. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9c3385ed93859dea226bfda3c9ff0791/70aca/gatsby-tutorial-02.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 101.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAceakAuABP/EABUQAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAEBAAEFAmtb/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAFBABAAAAAAAAAAAAAAAAAAAAMP/aAAgBAQAGPwIf/8QAFBABAAAAAAAAAAAAAAAAAAAAMP/aAAgBAQABPyEZ/9oADAMBAAIAAwAAABCACD3/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/EB//xAAWEQEBAQAAAAAAAAAAAAAAAAAQATH/2gAIAQIBAT8QJh//xAAaEAEAAgMBAAAAAAAAAAAAAAABEDEAESFx/9oACAEBAAE/EF0qo3nYLckA8n//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/9c3385ed93859dea226bfda3c9ff0791/8ac56/gatsby-tutorial-02.webp 240w,
+/static/9c3385ed93859dea226bfda3c9ff0791/d3be9/gatsby-tutorial-02.webp 480w,
+/static/9c3385ed93859dea226bfda3c9ff0791/e46b2/gatsby-tutorial-02.webp 960w,
+/static/9c3385ed93859dea226bfda3c9ff0791/740ed/gatsby-tutorial-02.webp 966w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/9c3385ed93859dea226bfda3c9ff0791/09b79/gatsby-tutorial-02.jpg 240w,
+/static/9c3385ed93859dea226bfda3c9ff0791/7cc5e/gatsby-tutorial-02.jpg 480w,
+/static/9c3385ed93859dea226bfda3c9ff0791/6a068/gatsby-tutorial-02.jpg 960w,
+/static/9c3385ed93859dea226bfda3c9ff0791/70aca/gatsby-tutorial-02.jpg 966w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/9c3385ed93859dea226bfda3c9ff0791/6a068/gatsby-tutorial-02.jpg&quot;
+            alt=&quot;gatsby file structure&quot;
+            title=&quot;gatsby file structure&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;3-커스터마이징&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95&quot; aria-label=&quot;3 커스터마이징 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. 커스터마이징&lt;/h3&gt;
+&lt;p&gt;나는 분류하고 구조화하는 것에 집착하는 스타일이다. 그래서 매뉴부분을 커스텀하는데 많은 시간을 투자했다. 내가 원하는 매뉴는 포스팅할때 카테고리를 설정하면 자동으로 programming의 하위 매뉴로 들어가게 되고 그 매뉴를 눌렀을 때 선택한 카테고리에 해당하는 게시물만 보여주고 싶었다. 그리고 만약 카테고리가 Essay면  programming 말고 Essay 매뉴에 들어가게 하고 싶었다. 하지만 생각보다 쉽지 않았다. 겟츠비 템플릿을 사용하려면 폴더구조에 익숙해져야 하기때문에 하루종일 폴더를 뒤지고 분석하는데 시간을 썼다. 그리고 겟츠비는 기본적으로 graphQL을 사용하기때문에 이것에도 익숙해져야했다. &lt;/p&gt;
+&lt;p&gt;일단 src/components/Sidebar/Menu/menu.js 로 이동한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;menu&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;styles&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;menu__list-item&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;item&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Link&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token attr-name&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;item&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;styles&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;menu__list-item-link&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token attr-name&quot;&gt;activeClassName&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;styles&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;menu__list-item-link--active&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;item&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;label&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Link&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;config에서 설정한 menu들을 가져와서 map함수를 이용해 리스트를 생성하는 것을 알 수있다.
+그래서 커스텀할 매뉴는 config에서 설정하지 않고 menu.js에서 직접 구현해야 겠다고 생각했다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;styles&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;menu__list-item&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;       
+  Programming
+  &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    (카테고리 내용들을 넣고싶다)
+  &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;    
+&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;프로그래밍이란 매뉴안에 카테고리들을 넣을 생각이었다. 카테고리 데이터를 어디서 가져올까 고민하다가 template폴더에
+categories-list-template.js폴더에서 카테고리 데이터들을 불러오는 것을 보고 여기서 아이디어를 얻었다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useSiteMetadata&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; useCategoriesList &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../hooks&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; subtitle &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useSiteMetadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; categories &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useCategoriesList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;categories&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fieldValue&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Link&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/category/&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;kebabCase&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fieldValue&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fieldValue&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt; (&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;totalCount&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;)
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Link&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 부분을 통째로 menu.js에 가져와서 카테고리데이터를 얻었고 다시 map함수를 이용해 카테고리 리스트를 만들었다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;styles&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;menu__list-item&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;       
+  Programming
+  &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;categories&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;/span&gt;  &lt;span class=&quot;token attr-name&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fieldValue&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Link&lt;/span&gt;&lt;/span&gt; 
+          &lt;span class=&quot;token attr-name&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/category/&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;kebabCase&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fieldValue&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;styles&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;menu__list-item-link&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;token attr-name&quot;&gt;activeClassName&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;styles&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;menu__list-item-link--active&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fieldValue&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt; (&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;totalCount&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;)
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Link&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;ul&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;    
+&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;li&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;생각해보니깐 문제가 있다. 이렇게 되면 Essay 카테고리도 programming 매뉴안에 들어갈 것이다. 하지만 이 문제는 깔끔하게 filter함수를 이용해서 해결했다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;categories&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fieldValue&lt;span class=&quot;token operator&quot;&gt;!==&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Essay&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;category&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그렇게 탄생한 나의 매뉴다.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 592px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1bd3b50c61619eec0a610eadbc9c2fda/694d5/gatsby-tutorial-03.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 94.16666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECAwX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHuaZ3JBWQkH//EABgQAAIDAAAAAAAAAAAAAAAAAAEQESAx/9oACAEBAAEFAhtYf//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABQQAQAAAAAAAAAAAAAAAAAAADD/2gAIAQEABj8CH//EABgQAAMBAQAAAAAAAAAAAAAAAAEQESFR/9oACAEBAAE/IQ04Qcjjj//aAAwDAQACAAMAAAAQsA8A/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPxAf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPxAf/8QAHhABAAEDBQEAAAAAAAAAAAAAAREQITEAQVFhkdH/2gAIAQEAAT8QiaE7h+1NullsFb88l9zoIIMFP//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/1bd3b50c61619eec0a610eadbc9c2fda/8ac56/gatsby-tutorial-03.webp 240w,
+/static/1bd3b50c61619eec0a610eadbc9c2fda/d3be9/gatsby-tutorial-03.webp 480w,
+/static/1bd3b50c61619eec0a610eadbc9c2fda/0be55/gatsby-tutorial-03.webp 592w&quot;
+              sizes=&quot;(max-width: 592px) 100vw, 592px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/1bd3b50c61619eec0a610eadbc9c2fda/09b79/gatsby-tutorial-03.jpg 240w,
+/static/1bd3b50c61619eec0a610eadbc9c2fda/7cc5e/gatsby-tutorial-03.jpg 480w,
+/static/1bd3b50c61619eec0a610eadbc9c2fda/694d5/gatsby-tutorial-03.jpg 592w&quot;
+            sizes=&quot;(max-width: 592px) 100vw, 592px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/1bd3b50c61619eec0a610eadbc9c2fda/694d5/gatsby-tutorial-03.jpg&quot;
+            alt=&quot;my menu&quot;
+            title=&quot;my menu&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;아직 카테고리가 많지 않아서 초라해보이지만 열심히 블로그를 운영하다보면 나름 그럴싸해질 것이다.
+이제 커스터마이징은 대충 끝났고 열심히 포스팅만 하면 될 것같다. 1일 1포스팅을 다짐하며 겟츠비 블로그 포스팅 끝!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[내가 블로그를 만든 이유]]></title><description><![CDATA[많은 개발자들이 블로그를 운영하는 것을 보고 언젠간 나도 블로그를 만들고 싶었다. 그날 배운 내용들을 기록하고 싶기도 했고, 토이 프로젝트를 자랑하고 싶기도 했다. 하지만 '언젠가 하겠지'란 귀차니즘과 바쁘다는 핑계로 블로그 운영을 계속 미루고있었다.]]></description><link>https://agilestarskim.github.io/posts/first-post</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/first-post</guid><pubDate>Sat, 27 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;블로그-운영-계기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81-%EA%B3%84%EA%B8%B0&quot; aria-label=&quot;블로그 운영 계기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;블로그 운영 계기&lt;/h2&gt;
+&lt;p&gt;많은 개발자들이 블로그를 운영하는 것을 보고 언젠간 나도 블로그를 만들고 싶었다. 그날 배운 내용들을 기록하고 싶기도 했고, 토이 프로젝트를 자랑하고 싶기도 했다. 하지만 ‘언젠가 하겠지’란 귀차니즘과 바쁘다는 핑계로 블로그 운영을 계속 미루고있었다. 마침 하고있던 프로젝트도 중단되었고, 곧 새학기가 시작해서 그런지 몰라도 블로그를 만들고 싶다는 생각이 문득 들었다. 학교에서 배우는 내용들을 블로그에 기록해두면 언젠가 도움이 될거 같기도 하고, 학교 친구들에게 정보를 공유할 수도 있을 것 같았기 때문이다. 그 생각이 들자마자 바로 노트북을 켰다. 일단 다른 개발자들은 어떻게 블로그를 운영하고 있나 찾아보았다. 보통 brunch, velog, tistory 등을 많이 이용하는 것 같다. 하지만 ‘개발자는 뭐니뭐니해도 깃헙페이지 정도는 가지고있어야 하지않나’ 라는 생각에 깃헙페이지를 만들었다. 사실 어떤 플렛폼에 종속되는 것이 조금 껄끄럽고, 커스텀을 좋아하기 떄문에 깃헙페이지를 선택한 이유도 있다. &lt;/p&gt;
+&lt;h2 id=&quot;블로그-운영의-장점&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81%EC%9D%98-%EC%9E%A5%EC%A0%90&quot; aria-label=&quot;블로그 운영의 장점 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;블로그 운영의 장점&lt;/h2&gt;
+&lt;p&gt;블로그를 하면 여러 장점들이 있는 것 같다. 머릿속으로만 알고있는 지식들을 입밖으로 꺼내는 것은 매우 어렵다. 특히 제대로 모르면서 안다고 착각하는 경우도 많다. &lt;del&gt;(현재 내 상태)&lt;/del&gt; 포스팅을 하기 위해선 정확한 정보를 기반으로 글을 써야하기 때문에 자료수집을 철저하게 해야한다. 일단 이 부분에서 많은 것을 배운다. 그리고 글을 써내려가면서 머릿속에서 꼬여있던 정보들이 제자리를 찾는다.
+그리고 특히 가장 매력적인 부분은 글을 쓰면서 자기자신에게 질문을 하게 된다는 점이다. 예를들어, ‘이 기술과 저 기술의 차이는 뭘까?’
+‘이 기술이 나온 배경은 무엇일까?’ 등 여러 질문들이 나오고 결국 검색을 하거나 공부를 통해 질문들의 답을 찾아가며 성장하게 한다.
+또 다른 장점으로는 글재주가 없는 나에게 큰 도움을 준다. 제대로 글을 써본게 5년전 대학교에서 보고서 제출할 떄가 마지막이다. 앞으로 블로그 포스팅을 하면서 글쓰는 능력이 많이 좋아지지 않을까 기대중이다. &lt;/p&gt;
+&lt;h2 id=&quot;앞으로의-계획&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%9E%EC%9C%BC%EB%A1%9C%EC%9D%98-%EA%B3%84%ED%9A%8D&quot; aria-label=&quot;앞으로의 계획 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;앞으로의 계획&lt;/h2&gt;
+&lt;p&gt;이제 내일부터 새학기가 시작한다. 네트워크, 웹, 데이터베이스, 운영체제 등에 대해 배우는데, 이 과목들은 개발자가 되는데에 있어 매우 중요하기 때문에 배운내용들을 잘 정리해서 블로그에 포스팅할 예정이다. 앞으로 포스팅 될 게시물들이 나 뿐만 아니라, 컴퓨터를 전공하는 학생들에게도 도움이 될 수 있었으면 좋겠다. 학기가 시작되면 학업 때문에 많이 바쁘겠지만 일단 1일 1포스팅을 목표로 블로그를 운영 할 계획이다. 개인 프로젝트도 하고 싶지만 이건 아직까진 자신이 없다. 이번 학기 목표는 성적장학금받기와 1일 1포스팅, 매일 헬스장가기다.
+요즘 컴퓨터 앞에만 앉아있었더니 근육도 많이 빠지고 살도 많이 빠졌다. 이렇게 살다간 곧 갈거같아서 친구들과 공부를 다 마치고 9시에 헬스장에 가기로 했다. 헬스는 시간이 나서 하는것이 아니라 시간을 내서하는거라고 어떤 헬창이 말했는데 진짜 맞는 말이다. 다들 운동합시다.  &lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 640px; &quot;
@@ -42,53 +245,8 @@ Essay면 Essay 매뉴로 쏙 하고 들어간다.(덕분에 map, filter 정복)
           &lt;img
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/0d664d9ded97c63822f4ce7dd900a1b7/c08c5/first-post-01.jpg&quot;
-            alt=&quot;아무사진&quot;
-            title=&quot;아무사진&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;이번학기에 웹, 네트워크, 데이터베이스, 오토마타(처음들어봄), 운영체제에 대해 배운다.
-열심히 공부해서 장학금 탈 예정이다. 블로그 운영도 하고 쇼핑몰 프로젝트도 하고 영어공부도 하고 헬스도하고
-이번학기는 정말 할게 많다… 하지만 1일 1포스팅을 목표로! &lt;/p&gt;</content:encoded></item><item><title><![CDATA[web-programming]]></title><description><![CDATA[test]]></description><link>https://agilestarskim.github.io/posts/web-programming</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/web-programming</guid><pubDate>Sat, 27 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;test
-&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 640px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/4c640c358ce32ed3bad7f388e53a1af9/c08c5/web-01.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/aAAwDAQACEAMQAAAByWroOzFQr//EABoQAQABBQAAAAAAAAAAAAAAAAIQAAEREiH/2gAIAQEAAQUCEYNHh2vH/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BZ//EABkQAAEFAAAAAAAAAAAAAAAAAAACEBEhQf/aAAgBAQAGPwItJpL/AP/EABsQAAMAAgMAAAAAAAAAAAAAAAABESExYXGh/9oACAEBAAE/IamHeCJ7u4O4yE3YUSr8G3dn/9oADAMBAAIAAwAAABArH//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/EFf/xAAWEQADAAAAAAAAAAAAAAAAAAAAARH/2gAIAQIBAT8QaMh//8QAHxABAAICAAcAAAAAAAAAAAAAAQARITFBUXGBkaHx/9oACAEBAAE/ECmMjeld44gOWD2VCUEdfkep1W3iCgFTdJxh5n//2Q==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/static/4c640c358ce32ed3bad7f388e53a1af9/8ac56/web-01.webp 240w,
-/static/4c640c358ce32ed3bad7f388e53a1af9/d3be9/web-01.webp 480w,
-/static/4c640c358ce32ed3bad7f388e53a1af9/0ba47/web-01.webp 640w&quot;
-              sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/static/4c640c358ce32ed3bad7f388e53a1af9/09b79/web-01.jpg 240w,
-/static/4c640c358ce32ed3bad7f388e53a1af9/7cc5e/web-01.jpg 480w,
-/static/4c640c358ce32ed3bad7f388e53a1af9/c08c5/web-01.jpg 640w&quot;
-            sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
-            type=&quot;image/jpeg&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/static/4c640c358ce32ed3bad7f388e53a1af9/c08c5/web-01.jpg&quot;
-            alt=&quot;web&quot;
-            title=&quot;web&quot;
+            alt=&quot;그냥 사진&quot;
+            title=&quot;그냥 사진&quot;
             loading=&quot;lazy&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
           /&gt;
