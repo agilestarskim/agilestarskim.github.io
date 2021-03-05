@@ -99,17 +99,6 @@
   Link: </component---src-templates-post-template-js-8495c54b64e30116b1f5.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/posts/first-post/page-data.json>; rel=preload; as=fetch; crossorigin
-/posts/https-consideration
-  Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
-  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
-  Link: </framework-a4c869fc5235f266498a.js>; rel=preload; as=script
-  Link: </532a2f07-a2b9837034ae8adfec32.js>; rel=preload; as=script
-  Link: </app-3ecd476b23cfc5503d23.js>; rel=preload; as=script
-  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
-  Link: </cd95ea5cbd2c605f26db819f07999610c9ff4310-b9723971ed2c03646f8e.js>; rel=preload; as=script
-  Link: </component---src-templates-post-template-js-8495c54b64e30116b1f5.js>; rel=preload; as=script
-  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </page-data/posts/https-consideration/page-data.json>; rel=preload; as=fetch; crossorigin
 /posts/gatsby-tutorial
   Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
   Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
@@ -121,6 +110,17 @@
   Link: </component---src-templates-post-template-js-8495c54b64e30116b1f5.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/posts/gatsby-tutorial/page-data.json>; rel=preload; as=fetch; crossorigin
+/posts/what-is-database-01
+  Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </framework-a4c869fc5235f266498a.js>; rel=preload; as=script
+  Link: </532a2f07-a2b9837034ae8adfec32.js>; rel=preload; as=script
+  Link: </app-3ecd476b23cfc5503d23.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </cd95ea5cbd2c605f26db819f07999610c9ff4310-b9723971ed2c03646f8e.js>; rel=preload; as=script
+  Link: </component---src-templates-post-template-js-8495c54b64e30116b1f5.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/posts/what-is-database-01/page-data.json>; rel=preload; as=fetch; crossorigin
 /pages/about/
   Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
   Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
@@ -133,6 +133,17 @@
   Link: </component---src-templates-page-template-js-ea0823d96ada91b3855f.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/pages/about/page-data.json>; rel=preload; as=fetch; crossorigin
+/posts/https-consideration
+  Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </framework-a4c869fc5235f266498a.js>; rel=preload; as=script
+  Link: </532a2f07-a2b9837034ae8adfec32.js>; rel=preload; as=script
+  Link: </app-3ecd476b23cfc5503d23.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </cd95ea5cbd2c605f26db819f07999610c9ff4310-b9723971ed2c03646f8e.js>; rel=preload; as=script
+  Link: </component---src-templates-post-template-js-8495c54b64e30116b1f5.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/posts/https-consideration/page-data.json>; rel=preload; as=fetch; crossorigin
 /pages/projects/
   Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
   Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
@@ -169,6 +180,18 @@
   Link: </component---src-templates-tag-template-js-7883ba92e61ca804aa9e.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/tag/blog/page-data.json>; rel=preload; as=fetch; crossorigin
+/tag/database
+  Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </framework-a4c869fc5235f266498a.js>; rel=preload; as=script
+  Link: </532a2f07-a2b9837034ae8adfec32.js>; rel=preload; as=script
+  Link: </app-3ecd476b23cfc5503d23.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </cd95ea5cbd2c605f26db819f07999610c9ff4310-b9723971ed2c03646f8e.js>; rel=preload; as=script
+  Link: </20e19934c602d69589a9213124171ceb5d7986a3-17d6777d0e2c35e3c5af.js>; rel=preload; as=script
+  Link: </component---src-templates-tag-template-js-7883ba92e61ca804aa9e.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/tag/database/page-data.json>; rel=preload; as=fetch; crossorigin
 /tag/gatsby
   Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
   Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
@@ -253,6 +276,42 @@
   Link: </component---src-templates-tag-template-js-7883ba92e61ca804aa9e.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/tag/대칭키/page-data.json>; rel=preload; as=fetch; crossorigin
+/tag/데이터
+  Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </framework-a4c869fc5235f266498a.js>; rel=preload; as=script
+  Link: </532a2f07-a2b9837034ae8adfec32.js>; rel=preload; as=script
+  Link: </app-3ecd476b23cfc5503d23.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </cd95ea5cbd2c605f26db819f07999610c9ff4310-b9723971ed2c03646f8e.js>; rel=preload; as=script
+  Link: </20e19934c602d69589a9213124171ceb5d7986a3-17d6777d0e2c35e3c5af.js>; rel=preload; as=script
+  Link: </component---src-templates-tag-template-js-7883ba92e61ca804aa9e.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/tag/데이터/page-data.json>; rel=preload; as=fetch; crossorigin
+/tag/데이터베이스
+  Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </framework-a4c869fc5235f266498a.js>; rel=preload; as=script
+  Link: </532a2f07-a2b9837034ae8adfec32.js>; rel=preload; as=script
+  Link: </app-3ecd476b23cfc5503d23.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </cd95ea5cbd2c605f26db819f07999610c9ff4310-b9723971ed2c03646f8e.js>; rel=preload; as=script
+  Link: </20e19934c602d69589a9213124171ceb5d7986a3-17d6777d0e2c35e3c5af.js>; rel=preload; as=script
+  Link: </component---src-templates-tag-template-js-7883ba92e61ca804aa9e.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/tag/데이터베이스/page-data.json>; rel=preload; as=fetch; crossorigin
+/tag/데이터사이언스
+  Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </framework-a4c869fc5235f266498a.js>; rel=preload; as=script
+  Link: </532a2f07-a2b9837034ae8adfec32.js>; rel=preload; as=script
+  Link: </app-3ecd476b23cfc5503d23.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </cd95ea5cbd2c605f26db819f07999610c9ff4310-b9723971ed2c03646f8e.js>; rel=preload; as=script
+  Link: </20e19934c602d69589a9213124171ceb5d7986a3-17d6777d0e2c35e3c5af.js>; rel=preload; as=script
+  Link: </component---src-templates-tag-template-js-7883ba92e61ca804aa9e.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/tag/데이터사이언스/page-data.json>; rel=preload; as=fetch; crossorigin
 /tag/보안
   Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
   Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
@@ -277,6 +336,30 @@
   Link: </component---src-templates-tag-template-js-7883ba92e61ca804aa9e.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/tag/비대칭키/page-data.json>; rel=preload; as=fetch; crossorigin
+/tag/정보
+  Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </framework-a4c869fc5235f266498a.js>; rel=preload; as=script
+  Link: </532a2f07-a2b9837034ae8adfec32.js>; rel=preload; as=script
+  Link: </app-3ecd476b23cfc5503d23.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </cd95ea5cbd2c605f26db819f07999610c9ff4310-b9723971ed2c03646f8e.js>; rel=preload; as=script
+  Link: </20e19934c602d69589a9213124171ceb5d7986a3-17d6777d0e2c35e3c5af.js>; rel=preload; as=script
+  Link: </component---src-templates-tag-template-js-7883ba92e61ca804aa9e.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/tag/정보/page-data.json>; rel=preload; as=fetch; crossorigin
+/category/database
+  Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </framework-a4c869fc5235f266498a.js>; rel=preload; as=script
+  Link: </532a2f07-a2b9837034ae8adfec32.js>; rel=preload; as=script
+  Link: </app-3ecd476b23cfc5503d23.js>; rel=preload; as=script
+  Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </cd95ea5cbd2c605f26db819f07999610c9ff4310-b9723971ed2c03646f8e.js>; rel=preload; as=script
+  Link: </20e19934c602d69589a9213124171ceb5d7986a3-17d6777d0e2c35e3c5af.js>; rel=preload; as=script
+  Link: </component---src-templates-category-template-js-ead6c18623adc1201c09.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/category/database/page-data.json>; rel=preload; as=fetch; crossorigin
 /category/essay
   Link: </webpack-runtime-86928c08ee8ff25a93d5.js>; rel=preload; as=script
   Link: </styles-407fe62976dc5310c43e.js>; rel=preload; as=script
