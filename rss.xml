@@ -1,4 +1,226 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MinSeong IT Blog]]></title><description><![CDATA[MinSeong IT Blog]]></description><link>https://agilestarskim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 15 Mar 2021 15:31:16 GMT</lastBuildDate><item><title><![CDATA[데이터베이스(2): DB의 등장과 발전과정]]></title><description><![CDATA[데이터베이스가 등장하기 전, 데이터들은 `파일시스템`에 의해 관리 되었다. 파일시스템은 데이터를 파일로 관리하기 위해 파일을 생성, 삭제, 수정, 검색하는 기능을 제공해 주는 소프트웨어이다. 하지만 파일시스템을 이용한 데이터관리는 많은 문제점을 가지고 있었다.]]></description><link>https://agilestarskim.github.io/posts/what-is-database-02</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/what-is-database-02</guid><pubDate>Mon, 15 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;데이터베이스-관리-시스템의-등장-배경&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B4%80%EB%A6%AC-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%98-%EB%93%B1%EC%9E%A5-%EB%B0%B0%EA%B2%BD&quot; aria-label=&quot;데이터베이스 관리 시스템의 등장 배경 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터베이스 관리 시스템의 등장 배경&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MinSeong IT Blog]]></title><description><![CDATA[MinSeong IT Blog]]></description><link>https://agilestarskim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 23 Mar 2021 05:18:24 GMT</lastBuildDate><item><title><![CDATA[데이터베이스(3): 데이터베이스 구조와 언어]]></title><description><![CDATA[지금까지 DBMS의 등장배경과 종류에 대해 알아보았다. 지금부턴 데이터베이스의 구조에 대해 알아보겠다. 사실 데이터베이스의 내부는 복잡하다. 하지만 사용자 입장에서는 데이터베이스의 내부가 어떻게 생겼든 관심없다. 그냥 데이터만 잘 가져오면 된다.]]></description><link>https://agilestarskim.github.io/posts/what-is-database-03</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/what-is-database-03</guid><pubDate>Tue, 23 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;데이터베이스-구조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;데이터베이스 구조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터베이스 구조&lt;/h2&gt;
+&lt;p&gt;지금까지 DBMS의 등장배경과 종류에 대해 알아보았다. 지금부턴 데이터베이스의 구조에 대해 알아보겠다. 사실 데이터베이스의 내부는 복잡하다. 하지만 사용자 입장에서는 데이터베이스의 내부가 어떻게 생겼든 관심없다. 그냥 데이터만 잘 가져오면 된다. 이것을 &lt;code class=&quot;language-text&quot;&gt;추상화&lt;/code&gt;라고 표현한다. 반면 데이터베이스 관리자는 데이터를 어떻게 분류하고 정의할 지 고민해야 한다. 직접 데이터의 형식과 관계를 정의하고, 데이터베이스에 문제가 생기면 직접 해결 해야한다. 이렇게 어떤 입장이 되느냐에 따라 데이터베이스를 바라보는 관점도 달라진다. &lt;/p&gt;
+&lt;h3 id=&quot;스키마와-인스턴스&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8A%A4%ED%82%A4%EB%A7%88%EC%99%80-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4&quot; aria-label=&quot;스키마와 인스턴스 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;스키마와 인스턴스&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;스키마&lt;/strong&gt; : 데이터베이스에 저장되는 데이터 구조와 제약조건을 정의한 것&lt;/p&gt;
+&lt;p&gt;예를 들어, 고객관리 데이터베이스에 어떤 항목을 넣을건지, 자료형은 무엇인지, null값을 허용할지 등등을 정의한것을 스키마라고 한다. 스키마는 나중에 변경하지 않는 이상, 변하지 않고 그 상태를 유지한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;인스턴스&lt;/strong&gt; : 스키마에 따라 데이터베이스에 실제로 저장된 값&lt;/p&gt;
+&lt;p&gt;인스턴스는 고객관리 데이터베이스에서 한 명의 회원 데이터라고 생각하면 편하다. 그 회원의 전화번호나 나이는 바뀔 수 있다. 물론 삭제 될 수도있다. 즉 인스턴스는 계속변할 수 있다. &lt;/p&gt;
+&lt;h3 id=&quot;3단계-데이터베이스-구조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3%EB%8B%A8%EA%B3%84-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;3단계 데이터베이스 구조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3단계 데이터베이스 구조&lt;/h3&gt;
+&lt;p&gt;미국 표준화 기관인 ANSI/SPARC에서 제안한 데이터베이스 구조에 대해 알아보자.&lt;br&gt;
+데이터베이스를 쉽게 이해하고 이용할 수 있도록 하나의 데이터베이스를 관점에 따라 &lt;code class=&quot;language-text&quot;&gt;세 단계&lt;/code&gt;로 나누었다. 중요한 것은 &lt;code class=&quot;language-text&quot;&gt;관점&lt;/code&gt;에 따라 나눈것이다. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;외부단계(external level) : 개별 사용자 관점&lt;/li&gt;
+&lt;li&gt;개념단계(conceptual level) : 조직 전체의 관점&lt;/li&gt;
+&lt;li&gt;내부단계(internal level) : 물리적인 저장 장치의 관점&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;내부 단계에서 외부 단계로 갈수록 추상화 레벨이 높아진다. 추상화 레벨이 높아진다는 것은 데이터베이스가 실제 돌아가는 것에는 관심이 없다는 뜻과 비슷하다. 실제 사용자는 데이터베이스 내부 시스템을 알 수 없을 뿐만 아니라 알 필요도 없기 때문이다.  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;외부스키마&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;데이터베이스 하나에 외부 스키마가 여러 개 존재할 수 있다. 서브 스키마(sub schema)라고도 한다. 각 사용자가 생각하는 데이터베이스의 모습이라고 보면 된다. 고객 관리를 담당하는 직원은 고객 관련 데이터에만 관심을 갖고, 상품관리를 담당하는 직원은 상품과 관련된 데이터에만 관심을 갖는다. 결국 사용자에게 어떻게 보여지는가에 초점을 두기 때문에 ‘사용자 뷰’라고 부르기도 한다. 한 줄로 정의하자면 ‘사용자나 응용 프로그래머가 개인의 입장에서 필요한 데이터베이스의 논리적 구조를 정의’라고 할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;개념스키마&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;데이터베이스를 조직 전체의 관점에서 이해하고 표현하는 단계이다. 데이터베이스 하나에 개념 스키마는 하나만 존재한다. 어떤 데이터가 저장되었는지, 데이터들 간에는 어떤 관계가 존재하고 어떤 제약조건이 있는지에 대한 정의 뿐만 아니라, 데이터에 대한 보안 정책이나 접근 권한에 대한 정의도 포함된다. 데이터베이스를 설계할 때 가장 첫번째로 하는 단계이다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;내부스키마&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;데이터베이스를 저장 장치의 관점에서 이해하고 표현하는 단계이다. 역시 데이터베이스 하나에 하나만 존재하고, 레코드 구조, 필드 크기, 레코드 접근 경로등 물리적 저장 구조를 정의한다. 시스템 설계자나 프로그래머가 바라보는 관점이다. &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 758px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/61c1544ba581e24a7e2a111b5caa0b6c/ad059/database03-01.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 80.41666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIBBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe4rCgf/xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAEFAl//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAbEAACAgMBAAAAAAAAAAAAAAAAASFBEBExkf/aAAgBAQABPyF3L6Nt2LhN6Pcf/9oADAMBAAIAAwAAABA0z//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EAB0QAQADAAEFAAAAAAAAAAAAAAEAESFhMVGBkaH/2gAIAQEAAT8QW+2H5KDAHDsdhYFm67UQG9V55h0n/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/61c1544ba581e24a7e2a111b5caa0b6c/8ac56/database03-01.webp 240w,
+/static/61c1544ba581e24a7e2a111b5caa0b6c/d3be9/database03-01.webp 480w,
+/static/61c1544ba581e24a7e2a111b5caa0b6c/c4e8e/database03-01.webp 758w&quot;
+              sizes=&quot;(max-width: 758px) 100vw, 758px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/61c1544ba581e24a7e2a111b5caa0b6c/09b79/database03-01.jpg 240w,
+/static/61c1544ba581e24a7e2a111b5caa0b6c/7cc5e/database03-01.jpg 480w,
+/static/61c1544ba581e24a7e2a111b5caa0b6c/ad059/database03-01.jpg 758w&quot;
+            sizes=&quot;(max-width: 758px) 100vw, 758px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/61c1544ba581e24a7e2a111b5caa0b6c/ad059/database03-01.jpg&quot;
+            alt=&quot;schema&quot;
+            title=&quot;schema&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;사상과-매핑&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%82%AC%EC%83%81%EA%B3%BC-%EB%A7%A4%ED%95%91&quot; aria-label=&quot;사상과 매핑 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;사상과 매핑&lt;/h3&gt;
+&lt;p&gt;스키마는 하나의 데이터베이스를 논리적으로 구축하기 위해 만들어진 개념이라서 서로 잘 연결되어있다. 그렇기 때문에 스키마 사이의 대응 관계를 정의할 필요가 있다.&lt;br&gt;
+외부스키마와 개념스키마 사이의 대응 관계를 나타낸것을 &lt;code class=&quot;language-text&quot;&gt;외부/개념 사상&lt;/code&gt;이라고 한다.
+또는 ‘응용 인터페이스’라고도 한다.&lt;/p&gt;
+&lt;p&gt;개념스키마와 내부스키마의 대응관계를 나타낸 것을 &lt;code class=&quot;language-text&quot;&gt;개념/내부 사상&lt;/code&gt;이라고 한다. 또는 ‘저장 인터페이스’라고 한다. 왜 스키마 사이의 대응 관계를 정의 했을까? 궁극적인 목적은 바로 이것이다. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;” 데이터 독립성의 실현 ”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이것이 무슨 뜻인지 알아보자. 프로그램을 운영 또는 개발하다가 데이터베이스의 구조를 수정해야 할 때가 있을 것이다. 개념스키마에서 데이터 유효성검사를 수정해야 한다고 치자. 비밀번호를 6자리에서 8자리로 제약조건을 바꾼다 하더라도, 외부스키마는 바뀌지 않는다. 맵핑만 잘 해주면 된다. 즉 하위 스키마를 변경하더라도 상위 스키마가 영향을 받지 않는 특성을 &lt;code class=&quot;language-text&quot;&gt;데이터 독립성&lt;/code&gt; 이라고 한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;논리적 데이터 독립성&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;개념 스키마가 변경되어도 외부 스키마는 영향을 받지 않음&lt;/li&gt;
+&lt;li&gt;개념 스키마가 변경되면 관련된 외부/개념 사상만 정확하게 수정해주면 됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;물리적 데이터 독립성&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;내부 스키마가 변경되어도 개념 스키마는 영향을 받지 않음&lt;/li&gt;
+&lt;li&gt;내부 스키마가 변경되면 관련된 개념/내부 사상만 정확하게 수정해주면 됨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 830px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bee252da2faa8d5a20903af41961b4ca/65072/database03-02.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 69.16666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe5bDQP/xAAXEAADAQAAAAAAAAAAAAAAAAAAEEER/9oACAEBAAEFAqsKf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABUQAQEAAAAAAAAAAAAAAAAAAAEg/9oACAEBAAY/Amv/xAAbEAEAAgIDAAAAAAAAAAAAAAABABEQMUFRYf/aAAgBAQABPyEOJPbhvABXuF3x/9oADAMBAAIAAwAAABD3z//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EABwQAAICAgMAAAAAAAAAAAAAAAERACEQQTFRcf/aAAgBAQABPxCwvbMD4NSxBwBBQJW+VmEgQF28f//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/bee252da2faa8d5a20903af41961b4ca/8ac56/database03-02.webp 240w,
+/static/bee252da2faa8d5a20903af41961b4ca/d3be9/database03-02.webp 480w,
+/static/bee252da2faa8d5a20903af41961b4ca/b2a51/database03-02.webp 830w&quot;
+              sizes=&quot;(max-width: 830px) 100vw, 830px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/bee252da2faa8d5a20903af41961b4ca/09b79/database03-02.jpg 240w,
+/static/bee252da2faa8d5a20903af41961b4ca/7cc5e/database03-02.jpg 480w,
+/static/bee252da2faa8d5a20903af41961b4ca/65072/database03-02.jpg 830w&quot;
+            sizes=&quot;(max-width: 830px) 100vw, 830px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/bee252da2faa8d5a20903af41961b4ca/65072/database03-02.jpg&quot;
+            alt=&quot;maping&quot;
+            title=&quot;maping&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;스키마도 정의하고 매핑도 했으면 그 정보들을 기록할 필요가 있다. 이 정보들은 데이터 사전에 기록된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;데이터 사전&lt;/strong&gt;&lt;br&gt;
+스키마, 사상 정보, 다양한 제약조건 등을 저장&lt;br&gt;
+시스템 카탈로그 라고도 함&lt;br&gt;
+메타데이터&lt;br&gt;
+데이터베이스 관리 시스템이 스스로 생성하고 유지함&lt;br&gt;
+일반 사용자도 접근이 가능하지만 저장 내용을 검색만 할 수 있음  &lt;/p&gt;
+&lt;h2 id=&quot;데이터베이스-언어&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%96%B8%EC%96%B4&quot; aria-label=&quot;데이터베이스 언어 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터베이스 언어&lt;/h2&gt;
+&lt;p&gt;데이터베이스 언어는 말 그대로 사용자와 데이터베이스 관리 시스템 간의 통신 수단이다. 사용목적에 따라 데이터 정의어, 데이터 조작어, 데이터 제어어로 구분한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;데이터 정의어&lt;/code&gt;&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;스키마를 정의하거나, 수정 또는 삭제하기 위해 사용한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;데이터 조작어&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;데이터의 삽입, 삭제, 수정, 검색 등의 처리를 요구하기 위해 사용한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;절차적 데이터 조작어 &lt;/p&gt;
+&lt;p&gt;-사용자가 어떤 데이터를 원하고 그 데이터를 얻기 위해 어떻게 처리해야 하는지도 설명&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;비절차적 데이터 조작어(선언적 언어)  &lt;/p&gt;
+&lt;p&gt;-사용자가 어떤 데이터를 원하는지만 설명  &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;데이터 제어어&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;내부적으로 필요한 규칙이나 기법을 정의하기 위해 사용한다.&lt;/p&gt;
+&lt;p&gt;&amp;#x3C;사용목적&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;무결성 : 정확하고 유효한 데이터만 유지&lt;/li&gt;
+&lt;li&gt;보안 : 허가받지 않은 사용자의 데이터 접근 차단, 허가된 사용자에 권한 부여&lt;/li&gt;
+&lt;li&gt;회복 : 장애가 발생해도 데이터 일관성 유지&lt;/li&gt;
+&lt;li&gt;동시성 제어 : 동시 공유 지원  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;데이터베이스-사용자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%82%AC%EC%9A%A9%EC%9E%90&quot; aria-label=&quot;데이터베이스 사용자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터베이스 사용자&lt;/h2&gt;
+&lt;p&gt;데이터베이스 사용자는 데이터베이스를 이용하기 위해 접근하는 모든 사람을 일컫는다.
+이용 목적에 따라 데이터베이스 관리자, 최종 사용자, 응용 프로그래머로 구분한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;데이터베이스 관리자&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;데이터베이스 시스템을 운영 및 관리하는 사람이다. 주로 데이터정의어와 제어어를 이용한다. 주요 업무로는 다음과 같다.   &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터베이스 구성 요소 선정&lt;/li&gt;
+&lt;li&gt;스키마 정의&lt;/li&gt;
+&lt;li&gt;물리적 저장 구조와 접근 방법 결정&lt;/li&gt;
+&lt;li&gt;무결성 유지를 위한 제약조건 정의&lt;/li&gt;
+&lt;li&gt;보안 및 접근 권한 정책 결정 &lt;/li&gt;
+&lt;li&gt;백업 및 회복 기업 정의&lt;/li&gt;
+&lt;li&gt;시스템 데이터베이스 관리&lt;/li&gt;
+&lt;li&gt;시스템 성능 감시 및 성능 분석&lt;/li&gt;
+&lt;li&gt;데이터베이스 재구성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;최종 사용자&lt;/code&gt;&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;데이터베이스에 접근하여 데이터를 조작(삽입, 삭제, 수정, 검색)하는 사람이다.&lt;br&gt;
+주로 데이터 조작어를 사용한다. 직접 쿼리문을 사용하는 것이 아니라 GUI를 이용해 데이터를 조작한다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;응용 프로그래머&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;데이터 언어를 삽입하여 응용 프로그램을 작성하는 사람이다.&lt;br&gt;
+주로 데이터 조작어를 사용한다. 데이터를 이용해 프로그램을 만들고, 데이터를 잘 파싱해서 뿌려주는 역할을 한다.&lt;/p&gt;
+&lt;p&gt;최종적인 데이터베이스 관리 시스템의 구성은 다음 사진과 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0d2d2ba3131c843d9aa49d7fb61a7fcd/c23a4/database03-03.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 68.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIBBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe9lQWD/xAAWEAADAAAAAAAAAAAAAAAAAAABECD/2gAIAQEAAQUCgL//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAaEAABBQEAAAAAAAAAAAAAAAABABARITFB/9oACAEBAAE/IToU13WKtUz1v//aAAwDAQACAAMAAAAQh8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAbEAEBAQACAwAAAAAAAAAAAAABEQAhQWGB0f/aAAgBAQABPxCu71hNivDDSm4C5tKkhT5izlu//9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/0d2d2ba3131c843d9aa49d7fb61a7fcd/8ac56/database03-03.webp 240w,
+/static/0d2d2ba3131c843d9aa49d7fb61a7fcd/d3be9/database03-03.webp 480w,
+/static/0d2d2ba3131c843d9aa49d7fb61a7fcd/e46b2/database03-03.webp 960w,
+/static/0d2d2ba3131c843d9aa49d7fb61a7fcd/8aa17/database03-03.webp 1376w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/0d2d2ba3131c843d9aa49d7fb61a7fcd/09b79/database03-03.jpg 240w,
+/static/0d2d2ba3131c843d9aa49d7fb61a7fcd/7cc5e/database03-03.jpg 480w,
+/static/0d2d2ba3131c843d9aa49d7fb61a7fcd/6a068/database03-03.jpg 960w,
+/static/0d2d2ba3131c843d9aa49d7fb61a7fcd/c23a4/database03-03.jpg 1376w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/0d2d2ba3131c843d9aa49d7fb61a7fcd/6a068/database03-03.jpg&quot;
+            alt=&quot;schema&quot;
+            title=&quot;schema&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[데이터베이스(2): DB의 등장과 발전과정]]></title><description><![CDATA[데이터베이스가 등장하기 전, 데이터들은 `파일시스템`에 의해 관리 되었다. 파일시스템은 데이터를 파일로 관리하기 위해 파일을 생성, 삭제, 수정, 검색하는 기능을 제공해 주는 소프트웨어이다. 하지만 파일시스템을 이용한 데이터관리는 많은 문제점을 가지고 있었다.]]></description><link>https://agilestarskim.github.io/posts/what-is-database-02</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/what-is-database-02</guid><pubDate>Mon, 15 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;데이터베이스-관리-시스템의-등장-배경&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B4%80%EB%A6%AC-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%98-%EB%93%B1%EC%9E%A5-%EB%B0%B0%EA%B2%BD&quot; aria-label=&quot;데이터베이스 관리 시스템의 등장 배경 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터베이스 관리 시스템의 등장 배경&lt;/h2&gt;
 &lt;p&gt;데이터베이스가 등장하기 전, 데이터들은 &lt;code class=&quot;language-text&quot;&gt;파일시스템&lt;/code&gt;에 의해 관리 되었다. 파일시스템은 데이터를 파일로 관리하기 위해 파일을 생성, 삭제, 수정, 검색하는 기능을 제공해 주는 소프트웨어이다. 하지만 파일시스템을 이용한 데이터관리는 많은 문제점을 가지고 있었다. &lt;/p&gt;
 &lt;h4 id=&quot;파일시스템의-문제점&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8C%8C%EC%9D%BC%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90&quot; aria-label=&quot;파일시스템의 문제점 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;파일시스템의 문제점&lt;/h4&gt;
 &lt;ul&gt;
