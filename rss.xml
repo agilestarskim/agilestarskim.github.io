@@ -1,4 +1,342 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MinSeong IT Blog]]></title><description><![CDATA[MinSeong IT Blog]]></description><link>https://agilestarskim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Mar 2021 16:27:38 GMT</lastBuildDate><item><title><![CDATA[데이터베이스(3): 데이터베이스 구조와 언어]]></title><description><![CDATA[지금까지 DBMS의 등장배경과 종류에 대해 알아보았다. 지금부턴 데이터베이스의 구조에 대해 알아보겠다. 사실 데이터베이스의 내부는 복잡하다. 하지만 사용자 입장에서는 데이터베이스의 내부가 어떻게 생겼든 관심없다. 그냥 데이터만 잘 가져오면 된다.]]></description><link>https://agilestarskim.github.io/posts/what-is-database-03</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/what-is-database-03</guid><pubDate>Tue, 23 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;데이터베이스-구조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;데이터베이스 구조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터베이스 구조&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[MinSeong IT Blog]]></title><description><![CDATA[MinSeong IT Blog]]></description><link>https://agilestarskim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 01 Apr 2021 13:28:59 GMT</lastBuildDate><item><title><![CDATA[데이터베이스(4): 관계 데이터 모델 개념과 연산]]></title><description><![CDATA[관계 데이터 모델은 1970년대 등장 했지만, 여러 장점들 때문에 지금까지 널리 사용되고 있다. 매우 직관적이어서 데이터베이스에 대해 모르는 사람도 쉽게 해석할 수 있고, 구조도 단순해서 조작하기 편리하다.]]></description><link>https://agilestarskim.github.io/posts/what-is-database-04</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/what-is-database-04</guid><pubDate>Thu, 01 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;관계-데이터-모델-개념&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B4%80%EA%B3%84-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8-%EA%B0%9C%EB%85%90&quot; aria-label=&quot;관계 데이터 모델 개념 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;관계 데이터 모델 개념&lt;/h2&gt;
+&lt;p&gt;관계 데이터 모델은 1970년대 등장 했지만, 여러 장점들 때문에 지금까지 널리 사용되고 있다. 매우 직관적이어서 데이터베이스에 대해 모르는 사람도 쉽게 해석할 수 있고, 구조도 단순해서 조작하기 편리하다. 관계 데이터 모델을 이용해 데이터를 관리하기 위해선 용어를 알아야한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;릴레이션(relation)&lt;/code&gt;&lt;/strong&gt;   &lt;/p&gt;
+&lt;p&gt;하나의 개체에 관한 데이터를 2차원 테이블의 구조로 저장한 것이다. 파일 관리 시스템 관점에서 파일(file)에 대응한다. 데이터베이스 안에서 여러 릴레이션들이 존재할 수 있다. 예를 들어, 쇼핑몰에서는 고객 릴레이션, 상품 릴레이션, 주문 릴레이션 등이 있을 수 있다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;속성(attribute)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;릴레이션의 열을 나타낸다. 파일 관리 시스템 관점에서 필드(field)에 대응한다. 하나의 릴레이션에 같은 속성이 여러 개 올 수 없다. 왜냐하면 데이터베이스의 데이터들은 중복되지 않는 특성을 가지고 있기 때문이다. 또한 같은 속성이 여러 개라면, 사용자가 어떤 데이터를 원하는지 알 방법이 없다. 그러므로 속성의 이름은 중복될 수 없다. 또한 같은 속성 안에 여러 개의 값이 올 수 없다. 이 부분은 데이터 모델의 제약에서 자세히 다루겠다.  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;튜플(tuple)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;릴레이션의 행을 나타낸다. 파일 관리 시스템 관점에서 레코드(record)에 대응한다. 여러 속성들을 담고 있는 데이터로, 추가, 수정, 삭제될 수 있는 동적 데이터이다. 고객 관리 릴레이션에서 한 명의 회원 데이터를 나타낸다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;도메인(domain)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;쉽게 말하면, 속성의 데이터타입을 말한다. 예를 들어, 상품의 가격 속성은 데이터타입을 int로 하는 것이 좋을 것이다. 소수점을 입력했을 때 예외처리를 할 수 있고(데이터 무결성), character로 도메인을 설정했을 때 가격 연산이 힘들어 질 수 있기 때문이다. 그러므로 도메인을 어떻게 설정해야 하는지도 깊게 고려해야한다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;차수(degree)&lt;/code&gt;&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;하나의 릴레이션안에 속성의 개수를 의미한다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;카디널리티(cardinality)&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;하나의 릴레이션안에 튜플의 개수를 의미한다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;릴레이션 스키마&lt;/code&gt;&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;릴레이션의 속성들의 집합이다. 테이블에서 첫번째 행을 의미하기도 하며, 한번 정의하면 수정하지 않는 이상 정적으로 남아있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;릴레이션 인스턴스&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;릴레이션의 어느 한 시점에 존재하는 튜플들의 집합이다. 사용자의 데이터가 추가, 삭제, 수정 되기 때문에 동적인 특징이 있다. &lt;/p&gt;
+&lt;p&gt;지금까지 하나의 릴레이션 안에서 사용되는 용어들을 알아봤다. 하나의 릴레이션이 아니라 더 넓은, 데이터베이스 관점에서 봤을 때 사용되는 용어들을 알아보자. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;데이터베이스 스키마&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
+데이터베이스의 전체 스키마다. 쇼핑몰을 예로 들면, 고객 스키마, 상품 스키마, 주문 스키마 등의 집합이 데이터베이스 스키마라고 볼 수 있다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;데이터베이스 인스턴스&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
+전체 데이터베이스에서 인스턴스들의 집합이다.&lt;/p&gt;
+&lt;p&gt;용어를 알아봤으니 관계 데이터 모델의 특징을 살펴보자. &lt;/p&gt;
+&lt;h2 id=&quot;릴레이션-특징&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A6%B4%EB%A0%88%EC%9D%B4%EC%85%98-%ED%8A%B9%EC%A7%95&quot; aria-label=&quot;릴레이션 특징 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;릴레이션 특징&lt;/h2&gt;
+&lt;p&gt;하나의 릴레이션 안에는 동일한 튜플이 두 개 이상 올 수 없다. 데이터의 중복을 피하기 위해 DBMS를 사용하는데, 똑같은 튜플이 있다는 것은 데이터베이스 사용목적에 어긋나기 때문이다.&lt;/p&gt;
+&lt;p&gt;두 번째 특징은, 튜플과 속성은 순서 상관이 없다는 것이다. 고객관리 릴레이션에서 이름이 먼저 나오나, 전화번호가 먼저 나오나 데이터를 관리하는데 전혀 이상이 없다. 물론 미관상 이름이 먼저 나오는 것이 바람직하지만, 그것은 단지 미관상일 뿐이다. 튜플도 마찬가지다. 튜플 사이엔 우선순위가 필요 없기 때문에 순서는 무의미하다. &lt;/p&gt;
+&lt;p&gt;세 번째 특징은, 도메인에 형식을 맞춰 속성 값을 입력해야한다는 것이다. 이것은 데이터무결성과 관련된 것으로, 전화번호 입력 칸에 글자를 넣는다 던가, 이름에 숫자를 넣는 것을 방지해준다. 또한 속성 값에는 무조건 단일 값을 넣어주어야 한다. 물론 속성 값으로 배열을 넣을 수 있기는 한데, 결국 배열도 원소 하나로 간주한다면, 단일 값이라 볼 수 있을 것이다. 속성에 값을 여러 개 넣는 다면 어떤 데이터를 가져와야 하는지 알 수 없을 뿐만 아니라, 어떤 속성엔 값이 하나인데, 어떤 속성엔 값이 여러 개가 들어갈 수 있으므로 데이터 일관성도 만족하지 못한다. &lt;/p&gt;
+&lt;h2 id=&quot;키key&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%82%A4key&quot; aria-label=&quot;키key permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;키(KEY)&lt;/h2&gt;
+&lt;p&gt;관계 데이터 모델에서 ‘키(key)’는 중요한 역할을 한다. 특히 값을 참조하기 위해선 ‘키’가 꼭 필요하다. 키는 릴레이션에서 튜플들을 유일하게 구별하는 속성 또는 속성들의 집합이다. 왜 ‘키’가 필요할까? 회원정보를 찾으려고 하는데 이름으로 찾게 되면 중복된 이름이 있을 수 있다. 그러면 내가 찾고 싶은 회원이 누구인지 알 수 없다. 그렇기 때문에 데이터를 구별하기 위해선 ‘키’가 반드시 필요하다. 데이터를 찾아줄 열쇠라고 보면 된다. 키는 여러 종류가 있는데 하나하나 알아보도록 하자. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;슈퍼키&lt;/code&gt;&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;유일성을 만족하는 속성 또는 속성들의 집합이다. 예를 들어, 슈퍼키는 주민번호, 회원아이디가 될 수 있고, 대학교에서는 학번이 슈퍼키가 될 수 있다. 대한민국에 같은 주민번호를 가지고 있는 사람은 없을 것이다. 슈퍼키는 ‘속성들의 집합’이기 때문에 주민번호에 아이디를 합한다 던지, 주민번호에 이름을 합한다 해도 슈퍼 키가 될 수 있다. 그런 모든 집합은 다 슈퍼키이다. 데이터들을 구별 할 수 있는 것들은 모두 슈퍼키라고 볼 수 있다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;후보키&lt;/code&gt;&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;그렇다면 슈퍼키는 무수히 많아질 것이다. 그 슈퍼키들 중에 최소성을 만족하는 키가 후보키들이 된다. 주민번호와 이름을 합한 키는 후보키가 될 수 없다. 최소성을 만족하지 못했기 때문이다. 그러므로 유일성과 최소성을 만족하는 주민등록번호는 후보키가 될 수 있다. 물론 주소+이름도 후보키가 될 수 있다. 유일성을 만족하는 가장 최소한의 키의 조합이기 때문이다. 이런 키를 ‘복합키’ 라고 부른다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;기본키&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; 여러 후보키들 중에서 기본적으로 사용할 키를 기본키라고 부른다. 기본키는 무조건 한 개 여야 한다. Null값은 당연히 될 수 없고, 후보키가 하나뿐이라면 그 후보키를 기본키로 사용하면 된다. 추후 문제가 발생할 일이 없는 키를 기본키로 설정하는 것이 좋다. 또한 기본키는 수정 되어선 안 된다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;대체키&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;대체키는 기본키로 선택 받지 못한 후보키들을 말한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;외래키&lt;/code&gt;&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;다른 릴레이션의 기본키를 참조하는 속성 또는 속성들의 집합이다. 데이터베이스 안에는 여러 릴레이션이 있을 수 있다. 한 릴레이션에서 다른 릴레이션의 값을 참조하고 싶을 때 외래키를 사용한다. 예를 들어 ‘회원 릴레이션’과 ‘게시 글 릴레이션’이 있을 때 회원아이디라는 외래키를 이용해 회원이 쓴 게시 글들을 참조할 수 있다. 이 때 회원 아이디가 외래키가 된다. 외래키를 이용해 릴레이션의 관계를 표현할 수 있다.  이때 각 릴레이션 마다 속성 이름은 달라 질 수 있다.  &lt;/p&gt;
+&lt;h2 id=&quot;관계-데이터-모델-제약&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B4%80%EA%B3%84-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8-%EC%A0%9C%EC%95%BD&quot; aria-label=&quot;관계 데이터 모델 제약 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;관계 데이터 모델 제약&lt;/h2&gt;
+&lt;p&gt;무결성 제약조건이란 데이터의 무결성을 보장하고 일관된 상태를 유지하기 위한 규칙이다. 데이트베이스가 삽입, 삭제, 수정, 연산으로 상태가 변하더라도 무결성 제약조건은 반드시 지켜져야 한다. 무결성을 유지하기 위한 제약조건들은 여러 개가 있다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;개체 무결성 제약조건&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;기본키를 구성하는 모든 속성값은 null값이나 중복되는 값을 가질 수 없다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;참조 무결성 제약조건&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;외래키는 참조할 수 없는 값을 가질 수 없다. 외래키 속성이 널 값을 가진다고 해서 참조 무결성 제약조건을 위반한 것은 아니다. 즉 참조 무결성 제약조건을 만족하려면 외래키의 값이 참조하는 릴레이션의 어떤 튜플의 기본 키 값과 같거나 참조하지 않을 경우 null값을 가지면 된다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;도메인 무결성 제약조건&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;속성의 도메인에 벗어나는 속성 값을 가질 수 없다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;고유 무결성 제약조건&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;특정 속성에 대해 고유한 값을 가지도록 조건이 주어진 경우, 그 속성값은 모두 달라야 한다. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Null 무결성 제약조건&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;특정 속성값에 NULL 이 올 수 없다는 조건이 주어진 경우, 그 속성값은 NULL 값이 올 수 없다는 제약조건을 말한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;키 무결성 제약조건&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;한 릴레이션(테이블)에는 최소한 하나의 키가 존재해야 한다.&lt;/p&gt;
+&lt;p&gt;이 조건들만 올바르게 충족한다면 데이터베이스의 무결성은 보장된다.&lt;/p&gt;
+&lt;h2 id=&quot;관계-데이터-모델-연산&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B4%80%EA%B3%84-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AA%A8%EB%8D%B8-%EC%97%B0%EC%82%B0&quot; aria-label=&quot;관계 데이터 모델 연산 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;관계 데이터 모델 연산&lt;/h2&gt;
+&lt;p&gt;지금까지 관계 데이터 모델 제약조건에 대해 알아보았다. 지금부터는 관계 데이터 모델 연산에 대해 알아보도록 하겠다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f90c16fe4609e364a5324c7539a9fcc8/46d48/database04-01.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 74.58333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECBf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAAB2lDN2Mj/xAAbEAACAQUAAAAAAAAAAAAAAAAAASECEBESMf/aAAgBAQABBQJxZc1VJmT/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAYEAACAwAAAAAAAAAAAAAAAAAAEBEhMf/aAAgBAQAGPwJzZi//xAAaEAADAQEBAQAAAAAAAAAAAAAAARExgUFx/9oACAEBAAE/IWjG/g7LeGRhJukOdP0SiP/aAAwDAQACAAMAAAAQgC//xAAWEQADAAAAAAAAAAAAAAAAAAAQEVH/2gAIAQMBAT8QUH//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAEAAgMAAwAAAAAAAAAAAAABABEhMUFhcbH/2gAIAQEAAT8Qew8cZliTBNwxLauRUMDFXfrKWkD21KAOT//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/f90c16fe4609e364a5324c7539a9fcc8/8ac56/database04-01.webp 240w,
+/static/f90c16fe4609e364a5324c7539a9fcc8/d3be9/database04-01.webp 480w,
+/static/f90c16fe4609e364a5324c7539a9fcc8/e46b2/database04-01.webp 960w,
+/static/f90c16fe4609e364a5324c7539a9fcc8/4eac3/database04-01.webp 1098w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/f90c16fe4609e364a5324c7539a9fcc8/09b79/database04-01.jpg 240w,
+/static/f90c16fe4609e364a5324c7539a9fcc8/7cc5e/database04-01.jpg 480w,
+/static/f90c16fe4609e364a5324c7539a9fcc8/6a068/database04-01.jpg 960w,
+/static/f90c16fe4609e364a5324c7539a9fcc8/46d48/database04-01.jpg 1098w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/f90c16fe4609e364a5324c7539a9fcc8/6a068/database04-01.jpg&quot;
+            alt=&quot;관계 데이터 연산 모델&quot;
+            title=&quot;관계 데이터 연산 모델&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;관계 데이터 연산은 크게 &lt;code class=&quot;language-text&quot;&gt;일반 집합 연산자&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;순수 관계 연산자&lt;/code&gt;로 나뉜다. 일반 집합 연산자는 단어 그대로 집합 개념이 쓰인다. 합집합, 교집합 및 차집합은 두 릴레이션의 속성이 같은 상태에서 집합 연산을 수행 후 새로운 릴레이션을 반환한다. 반면 &lt;code class=&quot;language-text&quot;&gt;카티션 프로덕트(cartesian product)&lt;/code&gt;는 조금 생소할 것이다. 집합의 곱셈과 같은 개념인데, 두 개의 릴레이션의 튜플들을 모두 연결하서 만들어진 릴레이션을 반환한다.  &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9b1208310ef2ef680e33e6196c75553a/1d0fd/database04-02.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100.83333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe6Q2CQNA//EABYQAAMAAAAAAAAAAAAAAAAAAAEQIP/aAAgBAQABBQJmv//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABQQAQAAAAAAAAAAAAAAAAAAADD/2gAIAQEABj8CH//EABsQAAICAwEAAAAAAAAAAAAAAAABEBEhQYEx/9oACAEBAAE/IWjYvBMlKuQzXI//2gAMAwEAAgADAAAAEPDPPP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8QH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8QH//EABsQAQADAQADAAAAAAAAAAAAAAEAESExQWGB/9oACAEBAAE/EEbq+nmOkXfUFUgNk2mFTIMJ18YcQcn/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/9b1208310ef2ef680e33e6196c75553a/8ac56/database04-02.webp 240w,
+/static/9b1208310ef2ef680e33e6196c75553a/d3be9/database04-02.webp 480w,
+/static/9b1208310ef2ef680e33e6196c75553a/e46b2/database04-02.webp 960w,
+/static/9b1208310ef2ef680e33e6196c75553a/7efa9/database04-02.webp 974w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/9b1208310ef2ef680e33e6196c75553a/09b79/database04-02.jpg 240w,
+/static/9b1208310ef2ef680e33e6196c75553a/7cc5e/database04-02.jpg 480w,
+/static/9b1208310ef2ef680e33e6196c75553a/6a068/database04-02.jpg 960w,
+/static/9b1208310ef2ef680e33e6196c75553a/1d0fd/database04-02.jpg 974w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/9b1208310ef2ef680e33e6196c75553a/6a068/database04-02.jpg&quot;
+            alt=&quot;카티션 프로덕트&quot;
+            title=&quot;카티션 프로덕트&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;일반집합연산자는 짧게 알아봤고, 순수 관계 연산자에 대해 알아보자&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;셀렉션(Selection)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;릴레이션에서 조건을 만족하는 튜플을 반환하는 연산자이다. 하나의 릴레이션을 대상으로 하고, &lt;code class=&quot;language-text&quot;&gt;σ조건식(릴레이션)&lt;/code&gt; 으로 표현한다.
+데이터 언어로 &lt;code class=&quot;language-text&quot;&gt;(릴레이션) where (조건식)&lt;/code&gt; 으로 표현할 수 도 있다.&lt;/p&gt;
+&lt;p&gt;예를 들어, “고객 릴레이션에서 회원등급이 ‘골드’인 튜플을 검색하시오” 라고 한다면  &lt;code class=&quot;language-text&quot;&gt;σ 회원등급=골드(고객)&lt;/code&gt; 또는
+&lt;code class=&quot;language-text&quot;&gt;고객 where 회원등급=골드&lt;/code&gt; 라고 하면 된다. 교환법칙이 성립한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;프로젝트(Project)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;선택한 속성으로만 만들어진 릴레이션을 반환하는 연산이다. 수학적 표기법으로 &lt;code class=&quot;language-text&quot;&gt;𝜋속성리스트(릴레이션)&lt;/code&gt;, 데이터 언어적으로 &lt;code class=&quot;language-text&quot;&gt;릴레이션[속성리스트]&lt;/code&gt;라고 하면 된다. &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fd47bcaa605790ff75ef6027408f857d/d924d/database04-03.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 79.16666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAQABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgX/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAdolZq40j//EABgQAAMBAQAAAAAAAAAAAAAAAAECEQAi/9oACAEBAAEFAmaa9Bs5gDG7/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGxAAAgMAAwAAAAAAAAAAAAAAAREAIUEQMWH/2gAIAQEAAT8hKvpmCHTcOXWwjxChreP/2gAMAwEAAgADAAAAEDvv/8QAFxEBAQEBAAAAAAAAAAAAAAAAAREAUf/aAAgBAwEBPxAKWanN/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQIBAT8Qp//EABoQAQADAQEBAAAAAAAAAAAAAAEAETEhQVH/2gAIAQEAAT8QSw8I03PBAbDiIYEW6yESe0WnJR8n/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/fd47bcaa605790ff75ef6027408f857d/8ac56/database04-03.webp 240w,
+/static/fd47bcaa605790ff75ef6027408f857d/d3be9/database04-03.webp 480w,
+/static/fd47bcaa605790ff75ef6027408f857d/e46b2/database04-03.webp 960w,
+/static/fd47bcaa605790ff75ef6027408f857d/e8403/database04-03.webp 1238w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/fd47bcaa605790ff75ef6027408f857d/09b79/database04-03.jpg 240w,
+/static/fd47bcaa605790ff75ef6027408f857d/7cc5e/database04-03.jpg 480w,
+/static/fd47bcaa605790ff75ef6027408f857d/6a068/database04-03.jpg 960w,
+/static/fd47bcaa605790ff75ef6027408f857d/d924d/database04-03.jpg 1238w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/fd47bcaa605790ff75ef6027408f857d/6a068/database04-03.jpg&quot;
+            alt=&quot;프로젝트 연산&quot;
+            title=&quot;프로젝트 연산&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;조인(Join)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;두 릴레이션의 공통 속성을 기준으로 속성 값이 같은 투플을 수평으로 결합하는 연산이다. 조인을 수행하기 위해서는 두 릴레이션의 조인에 참여하는 속성이 서로 동일한 도메인으로 구성되어야 한다. 조인 연산의 결과는 공통 속성의 속성 값이 동일한 투플만을 반환한다.
+하나의 릴레이션으로 원하는 데이터를 얻을 수 없어 두 개의 릴레이션이 필요할 때 사용된다.
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/cc645388b0e22ca3a1f92fc65b46ccd0/be922/database04-04.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 30%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB2LCwf//EABYQAQEBAAAAAAAAAAAAAAAAAAARQf/aAAgBAQABBQKtj//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABYQAAMAAAAAAAAAAAAAAAAAAAAQMf/aAAgBAQAGPwIi/8QAGRAAAgMBAAAAAAAAAAAAAAAAABEBIVFx/9oACAEBAAE/IeYRColCYf/aAAwDAQACAAMAAAAQg8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAYEAEBAQEBAAAAAAAAAAAAAAABEQAxQf/aAAgBAQABPxAhigZJm3E9On43/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/cc645388b0e22ca3a1f92fc65b46ccd0/8ac56/database04-04.webp 240w,
+/static/cc645388b0e22ca3a1f92fc65b46ccd0/d3be9/database04-04.webp 480w,
+/static/cc645388b0e22ca3a1f92fc65b46ccd0/e46b2/database04-04.webp 960w,
+/static/cc645388b0e22ca3a1f92fc65b46ccd0/f992d/database04-04.webp 1440w,
+/static/cc645388b0e22ca3a1f92fc65b46ccd0/6c9e6/database04-04.webp 1480w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/cc645388b0e22ca3a1f92fc65b46ccd0/09b79/database04-04.jpg 240w,
+/static/cc645388b0e22ca3a1f92fc65b46ccd0/7cc5e/database04-04.jpg 480w,
+/static/cc645388b0e22ca3a1f92fc65b46ccd0/6a068/database04-04.jpg 960w,
+/static/cc645388b0e22ca3a1f92fc65b46ccd0/644c5/database04-04.jpg 1440w,
+/static/cc645388b0e22ca3a1f92fc65b46ccd0/be922/database04-04.jpg 1480w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/cc645388b0e22ca3a1f92fc65b46ccd0/6a068/database04-04.jpg&quot;
+            alt=&quot;조인 연산자&quot;
+            title=&quot;조인 연산자&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;세타조인&lt;/code&gt;은 조건에 맞는 튜플만 반환한다. =, ≠, ≤, ≥, ＜, ＞ 기호를 사용하여 조건식을 만든다. &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;동등조인&lt;/code&gt;은 세타조인에서 = 기호만 사용한 조인을 말한다. 보통 조인연산이라 하면 동등조인을 지칭한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2630f2b804471323df6ded4d62bb22aa/01a9b/database04-05.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.166666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB2ooB/8QAGBAAAgMAAAAAAAAAAAAAAAAAAAERICH/2gAIAQEAAQUChGCp/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFhABAQEAAAAAAAAAAAAAAAAAMRAg/9oACAEBAAY/AmOP/8QAGhAAAgIDAAAAAAAAAAAAAAAAAAExYXGRof/aAAgBAQABPyEOXRKbHIoQj//aAAwDAQACAAMAAAAQ8M//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAACAgIDAAAAAAAAAAAAAAAAAREhMWFRcZH/2gAIAQEAAT8QctQ0mJcL24SUOGWHoP4GL7P/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/2630f2b804471323df6ded4d62bb22aa/8ac56/database04-05.webp 240w,
+/static/2630f2b804471323df6ded4d62bb22aa/d3be9/database04-05.webp 480w,
+/static/2630f2b804471323df6ded4d62bb22aa/e46b2/database04-05.webp 960w,
+/static/2630f2b804471323df6ded4d62bb22aa/f992d/database04-05.webp 1440w,
+/static/2630f2b804471323df6ded4d62bb22aa/cf022/database04-05.webp 1710w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/2630f2b804471323df6ded4d62bb22aa/09b79/database04-05.jpg 240w,
+/static/2630f2b804471323df6ded4d62bb22aa/7cc5e/database04-05.jpg 480w,
+/static/2630f2b804471323df6ded4d62bb22aa/6a068/database04-05.jpg 960w,
+/static/2630f2b804471323df6ded4d62bb22aa/644c5/database04-05.jpg 1440w,
+/static/2630f2b804471323df6ded4d62bb22aa/01a9b/database04-05.jpg 1710w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/2630f2b804471323df6ded4d62bb22aa/6a068/database04-05.jpg&quot;
+            alt=&quot;동등조인의 예시&quot;
+            title=&quot;동등조인의 예시&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;자연조인&lt;/code&gt;은 위 사진과 같이, 중복된 속성을 제거한 릴레이션을 반환한다. &lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;외부조인&lt;/code&gt;은 자연조인 시, 실패한 튜플들을 보여주되 값이 없는 대응속성에는 NULL값을 채워서 반환한다.
+모든 속성을 보여주는 기준 릴레이션의 위치에 따라, 왼쪽 외부조인, 오른쪽 외부조인, 완전 외부조인으로 나뉜다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;세미조인&lt;/code&gt;은 자연조인을 한 후, 한 쪽 릴레이션의 결과만 반환한다. 기호에서 닫힌 쪽만 반환한다. 조건을 만족한 튜플 중에 굳이 다른 정보들을 보고 싶지 않을 때 사용한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;디비전(Devision)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c12d91ee37a8f8b5e330636e75b21b6f/e9256/database04-06.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.08333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwX/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHal0LAD//EABgQAAIDAAAAAAAAAAAAAAAAAAEQABEx/9oACAEBAAEFAhpVQr//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAWEAEBAQAAAAAAAAAAAAAAAAABEAD/2gAIAQEABj8CzWf/xAAYEAEBAAMAAAAAAAAAAAAAAAABABExQf/aAAgBAQABPyG8HrMagEnqNX//2gAMAwEAAgADAAAAENPP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGxAAAgIDAQAAAAAAAAAAAAAAAREAMSFRcWH/2gAIAQEAAT8QsyUjhmCrqdmUchRgI9gJUwgF5KOT/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/c12d91ee37a8f8b5e330636e75b21b6f/8ac56/database04-06.webp 240w,
+/static/c12d91ee37a8f8b5e330636e75b21b6f/d3be9/database04-06.webp 480w,
+/static/c12d91ee37a8f8b5e330636e75b21b6f/e46b2/database04-06.webp 960w,
+/static/c12d91ee37a8f8b5e330636e75b21b6f/35062/database04-06.webp 1158w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/c12d91ee37a8f8b5e330636e75b21b6f/09b79/database04-06.jpg 240w,
+/static/c12d91ee37a8f8b5e330636e75b21b6f/7cc5e/database04-06.jpg 480w,
+/static/c12d91ee37a8f8b5e330636e75b21b6f/6a068/database04-06.jpg 960w,
+/static/c12d91ee37a8f8b5e330636e75b21b6f/e9256/database04-06.jpg 1158w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/jpeg&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/c12d91ee37a8f8b5e330636e75b21b6f/6a068/database04-06.jpg&quot;
+            alt=&quot;디비전 예시&quot;
+            title=&quot;디비전 예시&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;(릴레이션1)÷(릴레이션2)&lt;/code&gt;으로 표기하고 각 릴레이션에 중복된 속성을 기준으로 (사진에서는 B속성) 릴레이션 2의 속성 값이 있는 릴레이션1의 속성들을 반환하면 된다. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[데이터베이스(3): 데이터베이스 구조와 언어]]></title><description><![CDATA[지금까지 DBMS의 등장배경과 종류에 대해 알아보았다. 지금부턴 데이터베이스의 구조에 대해 알아보겠다. 사실 데이터베이스의 내부는 복잡하다. 하지만 사용자 입장에서는 데이터베이스의 내부가 어떻게 생겼든 관심없다. 그냥 데이터만 잘 가져오면 된다.]]></description><link>https://agilestarskim.github.io/posts/what-is-database-03</link><guid isPermaLink="false">https://agilestarskim.github.io/posts/what-is-database-03</guid><pubDate>Tue, 23 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;데이터베이스-구조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;데이터베이스 구조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터베이스 구조&lt;/h2&gt;
 &lt;p&gt;지금까지 DBMS의 등장배경과 종류에 대해 알아보았다. 지금부턴 데이터베이스의 구조에 대해 알아보겠다. 사실 데이터베이스의 내부는 복잡하다. 하지만 사용자 입장에서는 데이터베이스의 내부가 어떻게 생겼든 관심없다. 그냥 데이터만 잘 가져오면 된다. 이것을 &lt;code class=&quot;language-text&quot;&gt;추상화&lt;/code&gt;라고 표현한다. 반면 데이터베이스 관리자는 데이터를 어떻게 분류하고 정의할 지 고민해야 한다. 직접 데이터의 형식과 관계를 정의하고, 데이터베이스에 문제가 생기면 직접 해결 해야한다. 이렇게 어떤 입장이 되느냐에 따라 데이터베이스를 바라보는 관점도 달라진다. &lt;/p&gt;
 &lt;h3 id=&quot;스키마와-인스턴스&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8A%A4%ED%82%A4%EB%A7%88%EC%99%80-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4&quot; aria-label=&quot;스키마와 인스턴스 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;스키마와 인스턴스&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;스키마&lt;/strong&gt; : 데이터베이스에 저장되는 데이터 구조와 제약조건을 정의한 것&lt;/p&gt;
