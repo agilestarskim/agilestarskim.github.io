@@ -4,14 +4,16 @@
 <url> <loc>https://agilestarskim.github.io/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/posts/first-post</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/posts/https-consideration</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/posts/gatsby-tutorial</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/posts/what-is-database-01</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/posts/virtualization</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/posts/what-is-database-02</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://agilestarskim.github.io/posts/what-is-database-04</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/posts/what-is-database-03</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/posts/what-is-database-04</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/posts/interrupt</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/pages/projects/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/posts/gatsby-tutorial</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/tag/cpu</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/tag/dbms</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/tag/essay</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/tag/vm-ware</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -42,6 +44,8 @@
 <url> <loc>https://agilestarskim.github.io/tag/비대칭키</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/tag/순수-관계-연산자</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/tag/외부스키마</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/tag/운영체제</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/tag/인터럽트</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/tag/일반-집합-연산자</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/tag/정보</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/category/database</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -50,4 +54,5 @@
 <url> <loc>https://agilestarskim.github.io/category/운영체제</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://agilestarskim.github.io/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://agilestarskim.github.io/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
